@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final ProgressDialog progressDialog = new ProgressDialog(this);
         //Cada cop que cambien de pagina en sortira un misatge de cargant dades
-        progressDialog.setMessage("Loading Data...");
+        progressDialog.setMessage("Enviant acció al robot...");
         progressDialog.setCancelable(false);
         //WebView i les seves configuracions
         web_view = findViewById(R.id.visorWeb);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         web_view.getSettings().setDefaultTextEncodingName("utf-8");
         web_view.getSettings().setJavaScriptEnabled(true);
         //Indiquem el url de la web
-        web_view.loadUrl("http://cpanel.unclick.cat/");
+        web_view.loadUrl("http://172.16.252.106/nao");
 
         web_view.setWebViewClient(new WebViewClient() {
             @Override
